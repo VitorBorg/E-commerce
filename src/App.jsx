@@ -1,11 +1,17 @@
 import GlobalStyle from "./styles/styles";
+import React from "react";
+import RoutesApp from "./routes";
+import { AuthProvider } from "./context/auth";
+
+import Navbar from "./components/organisms/Navbar";
 
 function App() {
   return (
-    <>
-      <h1>E-commerce</h1>
+    <AuthProvider>
+      <Navbar />
+      <RoutesApp />
       <GlobalStyle />
-    </>
+    </AuthProvider>
   );
 }
 

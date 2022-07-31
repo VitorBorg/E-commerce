@@ -16,15 +16,6 @@ export const Content = styled.div`
   display: flex;
   flex-direction: column;
 
-  div {
-    h3 {
-      padding: 0;
-      margin: 0;
-      color: #342d27;
-      font-size: 16px;
-    }
-  }
-
   p {
     font-size: 14px;
   }

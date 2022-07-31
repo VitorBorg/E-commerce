@@ -25,6 +25,8 @@ export const Content = styled.div`
 
   display: flex;
   flex-direction: column;
+  margin-top: 80px;
+  margin-bottom: 40px;
 
   h1 {
     color: #342d27;

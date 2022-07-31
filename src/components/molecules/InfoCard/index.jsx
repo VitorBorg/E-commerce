@@ -2,6 +2,7 @@ import React from "react";
 import * as S from "./styles";
 
 import CartIcon from "../../atoms/CartIcon/CartIcon";
+import TitleCategories from "../../atoms/TitleCategories";
 
 const InfoCard = ({ icon, title, description }) => {
   return (
@@ -10,9 +11,7 @@ const InfoCard = ({ icon, title, description }) => {
         <div>{<CartIcon />}</div>
       </S.ContentIcon>
       <S.Content>
-        <div>
-          <h3>{title}</h3>
-        </div>
+        <TitleCategories>{title}</TitleCategories>
         <div>
           <p>{description}</p>
         </div>

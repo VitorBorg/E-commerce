@@ -2,6 +2,7 @@ import { Fragment } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
 import Home from "../pages/Home";
+import Cart from "../pages/Cart";
 import Signin from "../pages/Signin";
 import Signup from "../pages/Signup";
 import Search from "../pages/Search/index";
@@ -19,7 +20,7 @@ const RoutesApp = () => {
     <BrowserRouter>
       <Fragment>
         <Routes>
-          <Route exact path="/cart" element={<Private Item={Home} />} />
+          <Route exact path="/cart" element={<Private Item={Cart} C />} />
           <Route exact path="/home" element={<Home />} />
           <Route path="/search" element={<Search />} />
           <Route path="/product/:id" element={<Product />} />

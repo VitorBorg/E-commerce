@@ -2,15 +2,17 @@ import GlobalStyle from "./styles/styles";
 import React from "react";
 import RoutesApp from "./routes";
 import { AuthProvider } from "./context/auth";
-
+import { CartProvider } from "./context/cart";
 import Navbar from "./components/organisms/Navbar";
 
 function App() {
   return (
     <AuthProvider>
-      <Navbar />
-      <RoutesApp />
-      <GlobalStyle />
+      <CartProvider>
+        <Navbar />
+        <RoutesApp />
+        <GlobalStyle />
+      </CartProvider>
     </AuthProvider>
   );
 }

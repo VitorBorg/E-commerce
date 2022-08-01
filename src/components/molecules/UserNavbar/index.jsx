@@ -16,7 +16,7 @@ const UserNavbar = () => {
       <a href="/">
         <UserIcon />
       </a>
-      <a href="/">
+      <a href="/cart">
         <CartIcon />
       </a>
     </S.Section>

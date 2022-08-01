@@ -1,15 +1,11 @@
 import React from "react";
 import Axios from "axios";
 
-const GetProduct = (id) => {
+const GetProduct = async (id) => {
   const url = `https://fakestoreapi.com/products/${id}`;
 
-  Axios.get(url)
-    .then((response) => {
-      console.log(response.data);
-      return response.data;
-    })
-    .catch((error) => console.error(error));
+  const res = await (await Axios.get(url)).data;
+  return res;
 };
 
 export default GetProduct;

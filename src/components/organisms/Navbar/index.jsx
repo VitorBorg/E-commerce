@@ -5,7 +5,7 @@ import LogoNavbar from "../../molecules/LogoNavbar/index";
 import MenuNavbar from "../../molecules/MenuNavbar/index";
 import UserNavbar from "../../molecules/UserNavbar/index";
 
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Button from "../../atoms/Button/index";
 import useAuth from "../../../hooks/useAuth";
 
@@ -15,7 +15,10 @@ const Navbar = () => {
 
   return (
     <S.NavbarStyle>
-      <LogoNavbar />
+      <a href={`/home`}>
+        <LogoNavbar />
+      </a>
+
       <MenuNavbar />
       <button Text="Sair" onClick={() => [signout()]}>
         <UserNavbar />

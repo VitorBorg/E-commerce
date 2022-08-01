@@ -1,25 +1,30 @@
 import React, { useEffect, useState } from "react";
 import * as S from "./styles";
-import ProductGridCard from "../../molecules/ProductGridCard/index";
+import ProductGridCardCart from "../../molecules/ProductGridCardCart/index";
 
 import GetProductsLimit from "../../../hooks/getProductsLimit";
 
 import useCart from "../../../hooks/useCart";
 
 const ProductsCart = () => {
-  const { CartProducts } = useCart();
-  const data = CartProducts();
+  const { CartProducts, products } = useCart();
+  const [data, setData] = useState(CartProducts());
+
+  useEffect(() => {
+    setData(CartProducts());
+  }, [products]);
 
   return (
     <S.Section>
       <S.ContentProducts>
-        {data[0]?.length ? (
+        {console.log(data?.length === 0)}
+        {data?.length === 0 ? (
           <h2>Não há itens.</h2>
         ) : (
           <ul>
             {data.map((product) => (
               <li key={product.product.id}>
-                <ProductGridCard
+                <ProductGridCardCart
                   Image={product.product.image}
                   Title={product.product.title}
                   Description={product.product.category}

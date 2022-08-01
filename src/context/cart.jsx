@@ -28,11 +28,18 @@ export const CartProvider = ({ children }) => {
     return;
   };
 
-  const CartProductRemove = (product) => {
+  const CartProductRemove = (Id) => {
     const products = JSON.parse(localStorage.getItem("cart_itens"));
 
-    const hasProduct = products?.filter((item) => item.id === product.id());
-    console.log(hasProduct);
+    const hasProduct = products?.filter((item) => item.product.id !== Id);
+
+    if (hasProduct) {
+      localStorage.setItem("cart_itens", JSON.stringify(hasProduct));
+      setProducts(hasProduct);
+      return 1;
+    } else {
+      return 0;
+    }
   };
 
   const CartProducts = () => {

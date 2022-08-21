@@ -1,4 +1,4 @@
-# E-commerce API (projeto em construção)
+# E-commerce Front-end
 
 Projeto de implementação do front-end de um sistema e-commerce genérico. Ele possui controle de rotas, consumo de api e cadastro (utilizando storage) além de carrinho de compras. Possuindo página de home, página de produto e a página do carrinho.
 
